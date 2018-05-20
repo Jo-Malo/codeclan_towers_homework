@@ -8,7 +8,7 @@ public class Hotel {
     ArrayList<Guest> conferenceRoomList;
     ArrayList<Guest> diningRoomList;
 
-    public Hotel(String name){
+    public Hotel(String name) {
         this.bedroomList = new ArrayList<>();
         this.conferenceRoomList = new ArrayList<>();
         this.diningRoomList = new ArrayList<>();
@@ -16,13 +16,17 @@ public class Hotel {
         this.capacity = capacity;
     }
 
-    public String getName(){
+    public String getName() {
         return this.name;
     }
 
-//    public boolean isFull(){
-//        return bedroomList.size() >= this.capacity;
-//    }
+    public boolean bedroomIsFull(){
+        if (this.capacity > 2){
+          return true;
+        } else {
+          return false;
+        }
+     }
 
     public int numberOfGuestsInRoom(){
         return bedroomList.size();
@@ -37,7 +41,7 @@ public class Hotel {
     }
 
     public void addGuestToBedroomList(Guest guest) {
-//        if (!isFull()) {
+//        if (!bedroomIsFull()) {
             this.bedroomList.add(guest);
 //            this.name += guest.getName();
         }

@@ -62,6 +62,11 @@ public class HotelTest {
         assertEquals(1, hotel.numberOfGuestsInRoom());
     }
 
+    @Test
+    public void bedroomIsFull(){
+        assertEquals(false, hotel.bedroomIsFull());
+    }
+
 //    @Test
 //    public void getGuestNamesInRoom(){
 //        hotel.addGuestToBedroomList(guest);
